@@ -14,11 +14,11 @@
 
 This project focuses on analyzing tennis court facilities across the United States using Python.
 
-The analysis investigates facility ownership, court capacity, available amenities, geographical distribution, and relationships between facility characteristics.
+The analysis investigates facility ownership, court capacity, available amenities, geographical distribution, and relationships between facility characteristics to uncover meaningful patterns and insights.
 
 A major part of the project involved identifying and correcting a data quality issue in the original dataset, where column headers were shifted and did not match the actual data.
 
-The project was conducted through a complete data analysis workflow, from initial inspection and data cleaning to feature engineering, statistical analysis, anomaly detection, and visualization.
+The project covers the complete data analysis workflow, from data inspection and cleaning to feature engineering, statistical analysis, anomaly detection, and visualization.
 
 ## 🎯 Project Objectives
 
@@ -32,8 +32,8 @@ The project was conducted through a complete data analysis workflow, from initia
 - Analyze facility ownership and court capacity.
 - Explore geographical distributions across US states.
 - Detect outliers and potential anomalies.
-- Create meaningful visualizations using Matplotlib.
-- Generate actionable insights and recommendations.
+- Create visualizations using Matplotlib.
+- Generate analytical insights and recommendations.
 
 ## 🛠️ Tools & Technologies
 
@@ -55,17 +55,18 @@ For example:
 - `zip_code` contained ownership types.
 - `longitude` contained a JSON-like attribute string.
 
-### Data Validation Approach
+### Data Validation
 
 Instead of simply renaming the columns, the original values stored inside the `attributes_raw` column were used to validate the corrected data.
 
 The validation achieved a **100% match** for the checked attributes, including:
-- Court ownership type.
-- Court count.
+
+- Facility ownership type.
+- Number of courts.
 - Clay, wall, grass, indoor, and lighting availability.
 - Pro shop availability.
 
-This investigation helped ensure that the dataset was correctly interpreted before proceeding with the analysis.
+This investigation ensured that the dataset was correctly interpreted before proceeding with the analysis.
 
 ## 🔄 Data Preparation & Cleaning
 
@@ -117,7 +118,7 @@ The analysis explored multiple aspects of tennis facilities:
 - Court capacity and facility size groups.
 - Top states and metropolitan areas.
 - Amenity availability.
-- Public vs. private community facility comparisons.
+- Public vs. homeowners community facility comparisons.
 - Pivot table analysis.
 - Correlation analysis.
 
@@ -178,7 +179,7 @@ Compares the proportion of public facilities across the top 15 states.
 Visualizes relationships between numerical variables, ownership, and available facility features.
 
 <p align="center">
-  <img src="visualizations/correlation_heatmap.png" width="750" alt="Correlation Heatmap">
+  <img src="visualizations/correlation_heatmap_1.png" width="750" alt="Correlation Heatmap">
 </p>
 
 ### 8. Geographical Distribution of Tennis Facilities
@@ -225,67 +226,4 @@ The analysis covered:
 
 The analysis revealed several important patterns:
 
-1. **Public Facilities Dominate Court Capacity:** Public facilities represent 54.2% of all facilities but account for 72.0% of total courts, with an average of 3.99 courts per facility compared to 1.84 for homeowners communities.
-
-2. **Most Facilities Are Small:** The median facility has only two courts, and 64.4% of facilities have one or two courts.
-
-3. **Large Facilities Are Predominantly Public:** Among facilities with five or more courts, 93.6% are publicly owned. This increases to 96.2% for facilities with nine or more courts.
-
-4. **Lighting Is the Most Common Feature:** Lights are available at 45.9% of facilities. However, they are more common in homeowners communities (55.9%) than public facilities (37.4%).
-
-5. **Facility Features Increase with Size:** Practice walls and pro shops are more common in larger facilities. Pro shops and stringing services also show a strong positive correlation (r = 0.67).
-
-6. **Rare Court Types:** Clay courts represent only 1.6% of facilities, indoor courts 0.3%, and grass courts are available at only 10 facilities.
-
-7. **Geographical Concentration:** California, Florida, and New York account for 36.2% of the facilities in the dataset, while the top five states account for 52.6%.
-
-8. **Ownership Patterns Vary by State:** Washington, D.C. has a particularly high public facility share (98.8%), while Georgia (18.2%) and Florida (24.5%) have much lower public shares.
-
-9. **Court Capacity and Ownership:** Public ownership has the strongest correlation with the number of courts among the analyzed variables.
-
-10. **Outliers Represent Large Complexes:** Although several facilities were identified as statistical outliers, they were retained because their high court counts represented valid large facilities.
-
-## 💡 Recommendations
-
-Based on the findings, several recommendations were identified:
-
-- **Public Access Planning:** Study metropolitan areas with a low public facility share, including Atlanta, West Palm Beach–Boca Raton, and Orlando, to identify opportunities for improving public court access.
-- **Population-Based Analysis:** Integrate population and income data to calculate tennis courts per 100,000 residents.
-- **Data Quality Improvement:** Correct the original dataset headers and improve the completeness of facility ratings and amenity information.
-- **Outlier Treatment:** Consider log transformations or appropriate capping techniques when preparing highly skewed court-count data for predictive modeling.
-- **Predictive Modeling:** Explore Logistic Regression and Decision Tree models to predict facility ownership or lighting availability.
-
-## 📁 Repository Structure
-
-```text
-US-Tennis-Courts-Analysis/
-│
-├── US_Tennis_Courts_Analysis.ipynb
-├── tennis_courts.csv
-├── visualizations/
-│   ├── facilities_by_ownership.png
-│   ├── courts_per_facility.png
-│   ├── features_by_ownership.png
-│   ├── courts_boxplot.png
-│   ├── top_15_states.png
-│   ├── public_share_by_state.png
-│   ├── correlation_heatmap.png
-│   └── facilities_map.png
-│
-└── README.md
-```
-
-## 👩‍💻 Author
-
-**Sara Raafat**
-
-Business Information Systems Student | Aspiring Data Analyst
-
-- [LinkedIn](https://www.linkedin.com/in/sarah-raafat-639a88259/)
-- [GitHub](https://github.com/sararaafatmohamed-cmd)
-
----
-
-<p align="center">
-  <i>This project strengthened my practical skills in Python, data cleaning, data quality investigation, feature engineering, statistical analysis, anomaly detection, and data visualization.</i>
-</p>
+1. **Public Facilities Dominate Court Capacity:** Public facilities represent 54.2% of all facilities but account for 72.0% of total courts, with an average
